@@ -1,0 +1,398 @@
+[
+    {
+        "id": "tab1",
+        "name": "Para Picar",
+        "items": [
+            {
+                "name": "Bolas del diablo",
+                "price": "S/ 30.00",
+                "description": "Ceviche de pescado hecho bolas y fritos al panko, acompañado de una potente leche de tigre. Estas crujientes delicias combinan lo mejor del ceviche tradicional con una textura única y un sabor intenso.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Choritos a la chalaca",
+                "price": "S/ 22.00",
+                "description": "Nuestra versión de los clásicos choros a la chalaca: frescos y jugosos choritos cubiertos con una vibrante mezcla de cebolla, tomate y ají limo, marinados en jugo de limón fresco.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Tequeños de queso",
+                "price": "S/ 18.00",
+                "description": "Disfruta de nuestros tequeños clásicos, rellenos de delicioso queso andino, que te harán recordar el sabor auténtico de la tradición. Cada bocado es crujiente por fuera y suave por dentro, acompañado de una irresistible salsa guacamole.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Yuquitas fritas Milmaray",
+                "price": "S/ 18.00",
+                "description": "Saborea nuestras irresistibles yuquitas fritas, doradas y crujientes en cada bocado. Acompañadas con una exquisita crema de ocopa, se convierten en el complemento perfecto para realzar cualquier plato, brindándote una explosión de sabor auténtico e inolvidable.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            }
+        ]
+    },
+    {
+        "id": "tab2",
+        "name": "Ceviches",
+        "items": [
+            {
+                "name": "Ceviche Mixto",
+                "price": "S/ 38.00",
+                "description": "El Ceviche Mixto combina lo mejor del mar en un solo plato. Trozos frescos de pescados y mariscos de estación se marinan en una mezcla vibrante de sal, limón y ajíes, creando una explosión de sabores cítricos y picantes.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Ceviche de Pescado",
+                "price": "S/ 35.00",
+                "description": "El Ceviche de Pescado es un plato emblemático de la gastronomía peruana, compuesto por trozos frescos de pescado marinados en una mezcla cítrica de sal, limón y ajíes.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Ceviche Carretillero",
+                "price": "S/ 35.00",
+                "description": "El Ceviche Carretillero es una deliciosa mezcla de pescado fresco y pota, marinado en una vibrante combinación de limón, ajíes y especias. Acompañado de chicharrón crocante, camote dulce y choclo tierno, este ceviche ofrece una experiencia de sabores y texturas que evocan las auténticas carretillas de la costa peruana.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            }
+        ]
+    },
+    {
+        "id": "tab3",
+        "name": "Entre Causas",
+        "items": [
+            {
+                "name": "Causa de pulpo",
+                "price": "S/ 38.00",
+                "description": "Nuestra Causa de Pulpo es una exquisita combinación de texturas y sabores peruanos. Láminas tiernas de pulpo se montan sobre una suave masa de causa, bañadas en una deliciosa salsa de olivo que añade un toque mediterráneo.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Causa de langostino",
+                "price": "S/ 38.00",
+                "description": "La Causa de Langostino es una exquisita creación que combina langostinos flameados al pisco con una suave y sabrosa masa de causa.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Causa acevichada",
+                "price": "S/ 35.00",
+                "description": "Disfruta de nuestra exquisita Causa Acevichada, una sofisticada fusión de sabores peruanos. Este plato presenta una masa de causa suave y sabrosa, montada con frescas rodajas de palta.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            }
+        ]
+    },
+    {
+        "id": "tab4",
+        "name": "Leches de Tigre",
+        "items": [
+            {
+                "name": "Leche de tigre Milmaray",
+                "price": "S/ 28.00",
+                "description": "Nuestra Leche de Tigre Milmaray es una auténtica explosión de sabores marinos. Este concentrado jugo de ceviche incluye trozos frescos de pescado y mariscos de estación, cuidadosamente marinados en una sabrosa pasta de rocoto que añade un toque picante.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Leche de tigre carretillero",
+                "price": "S/ 25.00",
+                "description": "Descubre nuestra deliciosa Leche de Tigre Carretillero, una vibrante mezcla de mariscos y sabores auténticos. Este plato incluye trozos de pescado y pota marinados en una intensa pasta de ají amarillo, ofreciendo un equilibrio perfecto entre el picante y el ácido.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Leche de tigre clásica",
+                "price": "S/ 25.00",
+                "description": "Disfruta de nuestra auténtica Leche de Tigre Clásica, un plato emblemático de la gastronomía peruana. Esta delicia incluye trozos frescos de pescado y pota marinados en una rica pasta de ají amarillo, creando un sabor inigualable que combina la frescura del mar con el toque picante del ají.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            }
+        ]
+    },
+    {
+        "id": "tab5",
+        "name": "Arroces",
+        "items": [
+            {
+                "name": "Arroz con mariscos",
+                "price": "S/ 35.00",
+                "description": "La Causa de Langostino es una exquisita creación que combina langostinos flameados al pisco con una suave y sabrosa masa de causa. Los langostinos se montan sobre una capa de palta fresca y se bañan en una deliciosa salsa golf.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Chaufa de mariscos",
+                "price": "S/ 35.00",
+                "description": "El Clásico Chaufa es un delicioso plato que combina arroz salteado con una selección de mariscos de estación, que aportan frescura y sabor al conjunto. Cada bocado está lleno de aromas y texturas, gracias a la cuidadosa cocción y mezcla de ingredientes.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Chaufa de pescado",
+                "price": "S/ 35.00",
+                "description": "El Arroz Chaufa con Pescado Frito es un plato que combina la esencia del clásico chaufa con el crujiente de un trozo de pescado frito. Este delicioso arroz salteado se mezcla con verduras frescas y condimentos que realzan su sabor, mientras que la tortilla de huevo montada en la parte superior aporta un toque cremoso y suave.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            }
+        ]
+    },
+    {
+        "id": "tab6",
+        "name": "Sopas",
+        "items": [
+            {
+                "name": "Parihuela mixta",
+                "price": "S/ 40.00",
+                "description": "Este Concentrado de Pescados y Mariscos es una deliciosa mezcla que destaca la frescura del mar. Con trozos seleccionados de pescado y mariscos, este plato se adereza con un toque de culantro y limón que realza su sabor.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Sudado de pescado",
+                "price": "S/ 35.00",
+                "description": "Disfruta de nuestro Filete de Pescado a la Chicha, preparado con filete de pescado fresco marinado en una mezcla de cebollas, tomate y chicha de jora, que le da un sabor único y auténtico.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Chilcano especial",
+                "price": "S/ 15.00",
+                "description": "Saborea nuestra deliciosa chilcano Especial, elaborado con una generosa porción de uña de cangrejo fresco, acompañado de choclo tierno y yuyo.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Chilcano de pescado",
+                "price": "S/ 12.00",
+                "description": "Deléitate con nuestro Chilcano de Pescado, un plato tradicional que presenta generosos trozos de pescado fresco en un delicioso caldo aromático.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            }
+        ]
+    },
+    {
+        "id": "tab7",
+        "name": "Orgías Marinas",
+        "items": [
+            {
+                "name": "DÚO #1",
+                "price": "S/ 38.00",
+                "description": "CEVICHE + JALEA DE POTA",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "DÚO #2",
+                "price": "S/ 38.00",
+                "description": "CAUSA ACEVICHADA + ARROZ CON MARISCOS",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "DÚO #3",
+                "price": "S/ 38.00",
+                "description": "CEVICHE + CHAUFA DE MARISCOS",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "TRÍO #1",
+                "price": "S/ 43.00",
+                "description": "CAUSA ACEVICHADA + CEVICHE + JALEA DE POTA",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "TRÍO #2",
+                "price": "S/ 43.00",
+                "description": "CAUSA DE POLLO + CEVICHE + ARROZ CON MARISCOS",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "TRÍO #3",
+                "price": "S/ 43.00",
+                "description": "CEVICHE + CHICHARRON DE PESCADO + ARROZ CON MARISCOS",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            }
+        ]
+    },
+    {
+        "id": "tab8",
+        "name": "Carnes",
+        "items": [
+            {
+                "name": "Lomo Mar y Tierra",
+                "price": "S/ 38.00",
+                "description": "Sumérgete en una experiencia culinaria inigualable con el Lomo Mar y Tierra, un plato que combina lo mejor de la tierra y el mar en una explosión de sabores.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Fetuccini a la Huancaína c/ Lomo Saltado",
+                "price": "S/ 38.00",
+                "description": "Disfruta de esta deliciosa fusión de sabores peruanos en un plato que combina la cremosidad de la salsa Huancaína con la textura suave de los fettuccini.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Lomo Saltado",
+                "price": "S/ 35.00",
+                "description": "Esta deliciosa preparación presenta jugosos trozos de lomo de res salteados a la perfección, acompañados de cebolla roja y tomates frescos, todo salteado en una sartén caliente que realza sus sabores.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Milanesa de Pollo",
+                "price": "S/ 28.00",
+                "description": "La Milanesa de Pollo es un plato delicioso y crujiente que conquista paladares. Esta exquisita preparación consiste en pechugas de pollo tiernas y jugosas, empanizadas y fritas hasta alcanzar un dorado perfecto.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Pechuga a la Plancha",
+                "price": "S/ 28.00",
+                "description": "La Pechuga a la Plancha es una opción saludable y deliciosa que destaca por su sencillez y sabor. Esta preparación consiste en pechugas de pollo marinadas y cocinadas a la perfección en una plancha caliente, lo que permite que la carne conserve su jugosidad y se dore ligeramente en el exterior.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            }
+        ]
+    },
+    {
+        "id": "tab9",
+        "name": "Chicharrones",
+        "items": [
+            {
+                "name": "Jalea del pescador",
+                "price": "S/ 40.00",
+                "description": "Sumérgete en el sabor del mar con nuestra Jalea del Pescador, que combina trozos de pescado fresco y mariscos de estación, todo perfectamente frito para lograr una textura crujiente.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Chicharrón de pescado",
+                "price": "S/ 35.00",
+                "description": "Disfruta de nuestros crocantes trozos de pescado, preparados a la perfección para lograr un exterior dorado y crujiente.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Chicharrón de pota",
+                "price": "S/ 28.00",
+                "description": "Disfruta de nuestras tiras de pota crocantes, fritas a la perfección para ofrecerte una textura deliciosa.",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            }
+        ]
+    },
+    {
+        "id": "tab10",
+        "name": "Guarniciones",
+        "items": [
+            {
+                "name": "Arroz Blanco",
+                "price": "S/ 5.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Choclo",
+                "price": "S/ 5.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Camote",
+                "price": "S/ 5.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Porción de Pota",
+                "price": "S/ 8.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Papas Fritas",
+                "price": "S/ 7.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Porción de Mariscos",
+                "price": "S/ 7.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Porción de Yuquitas Fritas",
+                "price": "S/ 8.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            }
+        ]
+    },
+    {
+        "id": "tab11",
+        "name": "Bebidas",
+        "items": [
+            {
+                "name": "Chicha Morada 500ML",
+                "price": "S/ 9.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Maracuyá 500ML",
+                "price": "S/ 9.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Limonada 500ML",
+                "price": "S/ 9.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Naranjada 500ML",
+                "price": "S/ 9.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Chicha Morada 1L",
+                "price": "S/ 17.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Maracuyá 1L",
+                "price": "S/ 17.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Limonada 1L",
+                "price": "S/ 17.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Naranjada 1L",
+                "price": "S/ 17.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Cervezas",
+                "price": "S/ 10.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Gaseosas",
+                "price": "S/ 5.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Agua",
+                "price": "S/ 4.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            }
+        ]
+    },
+    {
+        "id": "tab12",
+        "name": "Menú Kids",
+        "items": [
+            {
+                "name": "Nuggets de Pollo",
+                "price": "S/ 25.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            },
+            {
+                "name": "Fettuccine al Alfredo",
+                "price": "S/ 20.00",
+                "description": "------------------------------------------------------------",
+                "image": "/images/isotipo-milmaray-transparent.png"
+            }
+        ]
+    }
+]

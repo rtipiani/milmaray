@@ -1,0 +1,77 @@
+<section class="py-4 bg-gray-50">
+    <div class="container mx-auto px-4 lg:px-8">
+        <div class="bg-white p-4 rounded-lg shadow-lg">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="text-3xl font-futura text-center mb-2 text-primary mt-4">Ponte en contacto con nosotros</h3>
+                        <p class="text-gray-700 text-md text-center mb-1">Las direcciones de correo electrónico no son publicadas.</p>
+                        <span class="text-secondary text-center block text-xs mb-6">Los campos obligatorios están marcados con (*)</span>
+                        <form action="" method="post" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <!-- Campos del formulario -->
+                                <div>
+                                    <label for="fullname" class="block text-gray-600">Nombre y Apellidos</label>
+                                    <input type="text" name="fullname" id="fullname" class="w-full p-3 border rounded-lg focus:outline-none focus:border-secondary" placeholder="Ingrese sus datos" autocomplete="off">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-600">Correo electrónico</label>
+                                    <input type="email" name="email" id="email" class="w-full p-3 border rounded-lg focus:outline-none focus:border-secondary" placeholder="Ingrese un correo electrónico" autocomplete="off">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-gray-600">Número telefónico</label>
+                                    <input type="text" name="phone" id="phone" class="w-full p-3 border rounded-lg focus:outline-none focus:border-secondary" placeholder="Ingrese un número telefónico" autocomplete="off">
+                                </div>
+                                <div>
+                                    <label for="subject" class="block text-gray-600">Asunto</label>
+                                    <input type="text" name="subject" id="subject" class="w-full p-3 border rounded-lg focus:outline-none focus:border-secondary" placeholder="Ingrese el asunto" autocomplete="off">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-600">Mensaje</label>
+                                <textarea name="message" id="message" class="w-full p-3 border rounded-lg focus:outline-none focus:border-secondary" placeholder="Escribe tu mensaje aquí..."></textarea>
+                            </div>
+                            <div class="text-center mt-6">
+                                <button type="submit" class="bg-primary text-white py-3 px-6 rounded-lg shadow hover:bg-secondary transition duration-300 flex items-center justify-center">
+                                    <span>Enviar ahora</span>
+                                    <i class="fas fa-paper-plane ml-2"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Información de contacto -->
+                <div class="lg:col-span-1 text-center mt-6">
+                    <h5 class="text-lg font-semibold text-primary">Horario de atención:</h5>
+                    <p class="flex items-center justify-center mb-2 text-gray-700">
+                        <i class="fas fa-clock text-secondary mr-2"></i>
+                        10:00 am - 5:00 pm
+                    </p>
+                    <h5 class="text-lg font-semibold text-primary">Dirección:</h5>
+                    <address class="not-italic text-gray-700 space-y-4 mb-4">
+                        <p>
+                            <i class="fas fa-map-marker-alt text-secondary mr-2"></i>
+                            Avenida San Martín 1716 - ICA.
+                        </p>
+                        <p>
+                            <a href="mailto:reservas@milmaray.com" class="text-secondary hover:underline">
+                                <i class="fas fa-envelope mr-2"></i>
+                                reservas@milmaray.com
+                            </a>
+                        </p>
+                        <p>
+                            <a href="tel:912561398" class="text-secondary hover:underline">
+                                <i class="fas fa-phone-alt mr-2"></i>
+                                Celular: 912561398
+                            </a>
+                        </p>
+                    </address>
+                    <!-- Mapa con borde redondeado -->
+                    <div class="rounded-lg overflow-hidden shadow-md mb-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7739.889146711!2d-75.72949411747072!3d-14.08044925251866!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9110e369b5e64b1d%3A0x856a3069156d1bc7!2sMilmaray!5e0!3m2!1ses!2spe!4v1730219687416!5m2!1ses!2spe"  frameborder="0" style="border:0; width: 100%; height: 300px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

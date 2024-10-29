@@ -10,6 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.7"
+    "'": "file:awesome.me/Kit-fd81123249@latest'",
+    "@astrojs/tailwind": "^5.1.2",
+    "@fortawesome/fontawesome-free": "^6.6.0",
+    "astro": "^4.16.7",
+    "solid-js": "^1.9.3",
+    "sweetalert2": "^11.14.4",
+    "tailwindcss": "^3.4.14"
   }
 }

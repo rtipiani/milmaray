@@ -1,0 +1,35 @@
+---
+// Definición de las imágenes
+const images = [
+    { src: '/images/milanesa-milmaray.png', alt: 'Milanesa', title: 'Milanesa' },
+    { src: '/images/tequenos-milmaray.png', alt: 'Tequeños Milmaray', title: 'Tequeños Milmaray' },
+    { src: '/images/las-bolas-del-diablo.png', alt: 'Las bolas del diablo', title: 'Las bolas del diablo' },
+    { src: '/images/sudado-de-pescado.png', alt: 'Sudado de pescado', title: 'Sudado de pescado' },
+    { src: '/images/ceviche-mixto.png', alt: 'Ceviche mixto', title: 'Ceviche mixto' },
+    { src: '/images/lomo-saltado.webp', alt: 'Lomo saltado', title: 'Lomo saltado' },
+    { src: '/images/causa-acevichadagal.webp', alt: 'Causa acevichada', title: 'Causa acevichada' },
+    { src: '/images/chaufa-de-mariscos.webp', alt: 'Chaufa de mariscos', title: 'Chaufa de mariscos' }
+];
+---
+
+<div class="py-16 bg-gray-100">
+    <div class="container mx-auto text-center">
+        <h3 class="mb-8 text-2xl font-semibold text-black sm:text-3xl md:text-4xl font-futura">
+            Galería
+        </h3>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {images.map(image => (
+                <div class="relative group">
+                    <a href="#" class="block">
+                        <img src={image.src} alt={image.alt} class="object-cover w-full h-full rounded-lg" />
+                        <div class="absolute inset-0 flex items-center justify-center transition-opacity bg-black bg-opacity-50 opacity-0 group-hover:opacity-100">
+                            <i class="text-white fa-solid fa-expand fa-2x"></i>
+                            <h4 class="ml-4 text-white">{image.title}</h4>
+                        </div>
+                    </a>
+                </div>
+            ))}
+        </div>
+    </div>
+</div>

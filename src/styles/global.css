@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'MyriadPro';
+    src: url('/fonts/MyriadPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Simplex';
+    src: url('/fonts/Simplex.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaMedium';
+    src: url('/fonts/FuturaBT-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Blacklisted';
+    src: url('/fonts/Blacklisted.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
