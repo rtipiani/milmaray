@@ -45,9 +45,8 @@ import menuData from '../../data/menuData.json';
                                 </div>
                             </div>
                             <div class="flex justify-end mt-2">
-                                <!-- Aquí se agregan los atributos data-* -->
                                 <button
-                                    class="flex items-center px-4 py-2 text-white transition duration-300 rounded-lg bg-primary hover:bg-secondary menu-item-add-to-cart" 
+                                    class="flex items-center px-4 py-2 text-white transition duration-300 rounded-lg bg-primary hover:bg-secondary menu-item-add-to-cart"
                                     data-item-name={item.name}
                                     data-item-price={item.price}
                                 >
@@ -70,7 +69,6 @@ import menuData from '../../data/menuData.json';
         };
     }
 
-    // Función para actualizar el contenido de las pestañas
     function updateContent() {
         const contents = document.querySelectorAll('.tab-content');
         contents.forEach(content => content.classList.add('hidden'));
@@ -102,78 +100,66 @@ import menuData from '../../data/menuData.json';
         const itemName = button.getAttribute('data-item-name');
         const itemPrice = parseFloat(button.getAttribute('data-item-price').replace('S/ ', '').replace(',', ''));
 
-        // Importa SweetAlert2 dinámicamente
         const Swal = (await import('sweetalert2')).default;
 
-        // Muestra la alerta de confirmación
         const result = await Swal.fire({
             title: '¿Agregar al pedido?',
             text: `¿Estás seguro de que deseas agregar ${itemName} por S/ ${itemPrice.toFixed(2)}?`,
             icon: 'question',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
+            confirmButtonColor: '#082a50',
+            cancelButtonColor: '#a07600',
             confirmButtonText: 'Sí, agregar!',
             cancelButtonText: 'Cancelar'
         });
 
         if (result.isConfirmed) {
-            // Obtener el carrito existente o inicializar uno nuevo
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-            // Verificar si el producto ya existe en el carrito
             const existingProductIndex = cart.findIndex(item => item.name === itemName);
             if (existingProductIndex > -1) {
-                // Incrementar la cantidad si ya existe
                 cart[existingProductIndex].quantity += 1;
             } else {
-                // Agregar el nuevo producto
                 cart.push({ name: itemName, price: itemPrice, quantity: 1 });
             }
 
-            // Guardar el carrito en localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
 
-            // Emitir evento personalizado
             const cartEvent = new CustomEvent('product-added', { detail: { cart } });
             document.dispatchEvent(cartEvent);
-            
-            // Mostrar mensaje de éxito
+
             Swal.fire({
                 title: '¡Agregado!',
                 text: `${itemName} ha sido agregado a tu pedido.`,
-                icon: 'success'
+                icon: 'success',
+                confirmButtonColor: '#082a50',
             });
         }
     }
 
-    // Función para mostrar los items en el carrito
     function displayCartItems(cart) {
-        const cartContainer = document.getElementById('cart'); // Asegúrate de tener un elemento con este id
-        if (!cartContainer) return; // Verificar si el contenedor existe
+        const cartContainer = document.getElementById('cart');
+        if (!cartContainer) return;
 
-        cartContainer.innerHTML = ''; // Limpiar el contenedor
+        cartContainer.innerHTML = '';
 
-        // Calcular total
         let total = 0;
 
         cart.forEach(item => {
-            total += item.price * item.quantity; // Calcular subtotal
+            total += item.price * item.quantity;
             const itemElement = document.createElement('div');
             itemElement.textContent = `${item.name} - S/ ${item.price.toFixed(2)} x ${item.quantity}`;
             cartContainer.appendChild(itemElement);
         });
 
-        // Mostrar total
         const totalElement = document.createElement('div');
         totalElement.textContent = `Total: S/ ${total.toFixed(2)}`;
         cartContainer.appendChild(totalElement);
     }
 
-    // Escuchar el evento 'product-added' para actualizar el carrito
     document.addEventListener('product-added', (event: CartEvent) => {
-        const cart = event.detail.cart; // Obtener el carrito del detalle del evento
-        displayCartItems(cart); // Llamar a la función para mostrar los items
+        const cart = event.detail.cart;
+        displayCartItems(cart);
     });
 
     document.addEventListener('DOMContentLoaded', () => {

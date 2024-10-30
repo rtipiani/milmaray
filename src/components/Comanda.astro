@@ -86,19 +86,16 @@ const tableOptions = Array.from({ length: 20 }, (_, i) => `Mesa ${i + 1}`);
         const totalCell = document.getElementById('total-cell');
         const resetCartBtn = document.getElementById('reset-cart-btn');
 
-        // Limpiar el contenido de la tabla
         orderListBody.innerHTML = '';
 
         let totalPrice = 0;
 
-        // Configurar el botón de restablecimiento
         resetCartBtn.addEventListener('click', resetCart);
 
-        // Verificar si el carrito está vacío
         if (cart.length === 0) {
             orderListBody.innerHTML = '<tr><td colspan="5" class="text-center p-4">No hay información para mostrar</td></tr>';
             totalCell.innerText = 'S/ 0.00';
-            return; // Salir de la función si no hay artículos
+            return;
         }
 
         const groupedCart = cart.reduce((acc, item) => {
@@ -141,10 +138,8 @@ const tableOptions = Array.from({ length: 20 }, (_, i) => `Mesa ${i + 1}`);
 
         totalCell.innerText = `S/ ${totalPrice.toFixed(2)}`;
 
-        // Actualizar eventos para los botones después de regenerar la tabla
         addEventListeners();
 
-        // Actualiza el resumen al cambiar el carrito
         updateWhatsAppSummary(groupedCart, totalPrice);
     }
 
@@ -178,12 +173,12 @@ const tableOptions = Array.from({ length: 20 }, (_, i) => `Mesa ${i + 1}`);
         if (itemIndex > -1) {
             cart[itemIndex].quantity += change;
             if (cart[itemIndex].quantity <= 0) {
-                cart.splice(itemIndex, 1); // Elimina el elemento si su cantidad es 0
+                cart.splice(itemIndex, 1);
             }
         }
 
         localStorage.setItem('cart', JSON.stringify(cart));
-        displayCartItems(); // Refresca la tabla sin recargar la página
+        displayCartItems();
     }
 
     async function confirmRemoveItem(itemName) {
@@ -193,8 +188,8 @@ const tableOptions = Array.from({ length: 20 }, (_, i) => `Mesa ${i + 1}`);
             text: `Eliminarás ${itemName} de la comanda`,
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#3085d6',
+            confirmButtonColor: '#082a50',
+            cancelButtonColor: '#a07600',
             confirmButtonText: 'Eliminar',
             cancelButtonText: 'Cancelar'
         }).then((result) => {
@@ -208,7 +203,7 @@ const tableOptions = Array.from({ length: 20 }, (_, i) => `Mesa ${i + 1}`);
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         const newCart = cart.filter(item => item.name !== itemName);
         localStorage.setItem('cart', JSON.stringify(newCart));
-        displayCartItems(); // Refresca la tabla sin recargar la página
+        displayCartItems();
     }
 
     async function resetCart() {
@@ -219,7 +214,7 @@ const tableOptions = Array.from({ length: 20 }, (_, i) => `Mesa ${i + 1}`);
             icon: 'success'
         });
         localStorage.removeItem('cart');
-        displayCartItems(); // Refresca la tabla sin recargar la página
+        displayCartItems();
     }
 
     function updateWhatsAppSummary(groupedCart, totalPrice) {
@@ -233,7 +228,6 @@ const tableOptions = Array.from({ length: 20 }, (_, i) => `Mesa ${i + 1}`);
 
             const direccion = tableNumber === 'Delivery' ? deliveryAddress : '-';
 
-            // Recalcular el resumen con los productos actuales del carrito
             const resumen = groupedCart.map(item => `${item.name}: ${item.quantity} unidades - S/ ${((item.price * item.quantity)).toFixed(2)}`).join(',\n');
 
             const mensaje = encodeURIComponent(
@@ -245,7 +239,7 @@ const tableOptions = Array.from({ length: 20 }, (_, i) => `Mesa ${i + 1}`);
                 *Dirección de entrega:* ${direccion}. | \n${resumen}\n
                 *TOTAL A PAGAR:* S/ ${totalPrice.toFixed(2)}`);
 
-            const numeroTelefono = '912561398'; // Reemplaza con el número de teléfono deseado
+            const numeroTelefono = '912561398';
             const enlaceWhatsApp = `https://wa.me/${numeroTelefono}?text=${mensaje}`;
             window.open(enlaceWhatsApp, '_blank');
         };
@@ -270,13 +264,11 @@ const tableOptions = Array.from({ length: 20 }, (_, i) => `Mesa ${i + 1}`);
         const deliveryAddressElement = (document.getElementById('delivery-address') as HTMLInputElement);
         const deliveryAddress = deliveryAddressElement ? deliveryAddressElement.value : "";
 
-        // Generar el contenido del ticket, incluyendo tipo de atención
         let ticketContent = `<h2>Pre-Comanda Milmaray</h2>`;
         ticketContent += `<p><strong>Datos del Cliente:</strong> ${nombreCliente}</p>`;
         ticketContent += `<p><strong>Teléfono:</strong> ${telefonoCliente}</p>`;
         ticketContent += `<p><strong>WhatsApp:</strong> ${telefonoWhatsapp}</p>`;
 
-        // Verificar si es una mesa o delivery
         if (tableNumber === "Delivery") {
             ticketContent += `<p><strong>Tipo de Atención:</strong> Para Llevar/Delivery</p>`;
             ticketContent += `<p><strong>Dirección:</strong> ${deliveryAddress}</p>`;
@@ -310,19 +302,16 @@ const tableOptions = Array.from({ length: 20 }, (_, i) => `Mesa ${i + 1}`);
     ticketContent += `<p><strong>Total a Pagar:</strong> S/ ${totalPrice.toFixed(2)}</p>`;
     ticketContent += `<p>Gracias por tu compra!</p>`;
 
-    // Crear una ventana de impresión
     const printWindow = window.open('', '', 'height=400,width=600');
         printWindow.document.write('<html><head><title>Imprimir Ticket</title>');
         printWindow.document.write('</head><body>');
         printWindow.document.write(ticketContent);
         printWindow.document.write('</body></html>');
-        printWindow.document.close(); // Cerrar el documento
-        printWindow.print(); // Abrir el diálogo de impresión
+        printWindow.document.close();
+        printWindow.print();
     }
 
-    // Agregar el evento al botón de imprimir
     document.getElementById('print-ticket-btn').addEventListener('click', printTicket);
-
 
     document.addEventListener('DOMContentLoaded', () => {
         displayCartItems();
