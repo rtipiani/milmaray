@@ -195,6 +195,13 @@ const tableOptions = Array.from({ length: 20 }, (_, i) => `Mesa ${i + 1}`);
         }).then((result) => {
             if (result.isConfirmed) {
                 removeItemFromCart(itemName);
+                Swal.fire({
+                    title: '¡Eliminado!',
+                    text: `${itemName} ha sido eliminado de la comanda`,
+                    icon: 'success',
+                    confirmButtonColor: '#082a50',
+                    confirmButtonText: 'Aceptar'
+                })
             }
         });
     }

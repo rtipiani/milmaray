@@ -1,14 +1,13 @@
 ---
-// Definición de las imágenes
 const images = [
     { src: '/images/milanesa-milmaray.png', alt: 'Milanesa', title: 'Milanesa' },
     { src: '/images/tequenos-milmaray.png', alt: 'Tequeños Milmaray', title: 'Tequeños Milmaray' },
-    { src: '/images/las-bolas-del-diablo.png', alt: 'Las bolas del diablo', title: 'Las bolas del diablo' },
-    { src: '/images/sudado-de-pescado.png', alt: 'Sudado de pescado', title: 'Sudado de pescado' },
-    { src: '/images/ceviche-mixto.png', alt: 'Ceviche mixto', title: 'Ceviche mixto' },
-    { src: '/images/lomo-saltado.webp', alt: 'Lomo saltado', title: 'Lomo saltado' },
-    { src: '/images/causa-acevichadagal.webp', alt: 'Causa acevichada', title: 'Causa acevichada' },
-    { src: '/images/chaufa-de-mariscos.webp', alt: 'Chaufa de mariscos', title: 'Chaufa de mariscos' }
+    { src: '/images/las-bolas-del-diablo.png', alt: 'Las bolas del Diablo', title: 'Las bolas del Diablo' },
+    { src: '/images/sudado-de-pescado.png', alt: 'Sudado de Pescado', title: 'Sudado de Pescado' },
+    { src: '/images/ceviche-mixto.png', alt: 'Ceviche Mixto', title: 'Ceviche Mixto' },
+    { src: '/images/lomo-saltado.webp', alt: 'Lomo Saltado', title: 'Lomo Saltado' },
+    { src: '/images/causa-acevichadagal.webp', alt: 'Causa Acevichada', title: 'Causa Acevichada' },
+    { src: '/images/chaufa-de-mariscos.webp', alt: 'Chaufa de Mariscos', title: 'Chaufa de Mariscos' }
 ];
 ---
 
@@ -19,9 +18,9 @@ const images = [
         </h3>
 
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {images.map(image => (
+            {images.map((image) => (
                 <div class="relative group">
-                    <a href="#" class="block">
+                    <a href="#" onclick={`openModal(event, '${image.src}', '${image.title}')`}>
                         <img src={image.src} alt={image.alt} class="object-cover w-full h-full rounded-lg" />
                         <div class="absolute inset-0 flex items-center justify-center transition-opacity bg-black bg-opacity-50 opacity-0 group-hover:opacity-100">
                             <i class="text-white fa-solid fa-expand fa-2x"></i>
@@ -33,3 +32,35 @@ const images = [
         </div>
     </div>
 </div>
+
+<div id="imageModal" class="fixed inset-0 z-50 items-center justify-center hidden bg-black bg-opacity-75">
+    <div class="relative overflow-hidden bg-white rounded-lg">
+        <button class="absolute text-gray-600 top-2 right-2 hover:text-gray-900" onclick="closeModal()">
+            <i class="fa-solid fa-times fa-2x"></i>
+        </button>
+        <img id="modalImage" src="" alt="Modal Image" class="max-w-full max-h-screen">
+        <h4 id="modalCaption" class="mt-4 mb-4 text-xl text-center"></h4>
+    </div>
+</div>
+
+<script type="module">
+    function openModal(event, imageSrc, caption) {
+        event.preventDefault();
+        document.getElementById('modalImage').src = imageSrc;
+        document.getElementById('modalCaption').innerText = caption;
+        const imageModal = document.getElementById('imageModal');
+        imageModal.classList.remove('hidden');
+        imageModal.classList.add('flex');
+        document.body.classList.add('modal-open');
+    }
+
+    function closeModal() {
+        const imageModal = document.getElementById('imageModal');
+        imageModal.classList.add('hidden');
+        imageModal.classList.remove('flex');
+        document.body.classList.remove('modal-open');
+    }
+
+    window.openModal = openModal;
+    window.closeModal = closeModal;
+</script>

@@ -25,3 +25,8 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.active {
+    color: #a07600;
+    border-bottom: 2px solid #a07600;
+}
