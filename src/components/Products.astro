@@ -79,6 +79,8 @@ import menuData from '../../data/menuData.json';
             const selectedContent = document.getElementById(contentId);
             if (selectedContent) {
                 selectedContent.classList.remove('hidden');
+
+                selectedContent.scrollIntoView({ behavior: 'smooth' });
             }
 
             const labels = document.querySelectorAll('.tab-label');
