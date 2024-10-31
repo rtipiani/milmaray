@@ -16,9 +16,6 @@ import menuData from '../../data/menuData.json';
                 ))}
             </div>
         </div>
-        <div class="hidden sm:block justify-center mb-8">
-            <img src="/images/logo-dorado.png" alt="Logo Milmaray">
-        </div>
         <div class="flex justify-center mb-8">
             <a href="/mi-pedido" class="flex items-center px-4 py-2 text-white transition duration-200 rounded-lg shadow bg-primary hover:bg-secondary">
                 Ir a mi pedido
@@ -80,7 +77,15 @@ import menuData from '../../data/menuData.json';
             if (selectedContent) {
                 selectedContent.classList.remove('hidden');
 
-                selectedContent.scrollIntoView({ behavior: 'smooth' });
+                // Desplazar hacia la sección de contenido seleccionada
+                const headerOffset = 125; // Ajusta este valor según la altura de tu header o espacio deseado
+                const elementPosition = selectedContent.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerOffset; // Sumar un desplazamiento para mostrar el título
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
             }
 
             const labels = document.querySelectorAll('.tab-label');
